@@ -1,0 +1,267 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fmodern\fprq1 Lucida Console;}{\f1\fnil\fcharset0 Calibri;}}
+{\colortbl ;\red0\green191\blue0;\red191\green0\blue191;\red191\green191\blue0;\red0\green191\blue191;\red191\green0\blue0;\red64\green255\blue255;\red64\green255\blue64;\red255\green64\blue64;\red0\green0\blue191;}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\cf1\f0\fs18\lang9 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git branch\par
+  GitNewBranch\par
+  GitWork\par
+* \cf1 master\par
+\par
+Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ vi candy.txt\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git add candy.txt\par
+warning: LF will be replaced by CRLF in candy.txt.\par
+The file will have its original line endings in your working directory\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git commit -m "file added"\par
+[master bcabe63] file added\par
+ 1 file changed, 1 insertion(+)\par
+ create mode 100644 candy.txt\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git statuse\par
+git: 'statuse' is not a git command. See 'git --help'.\par
+\par
+The most similar command is\par
+        status\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git status\par
+On branch master\par
+Untracked files:\par
+  (use "git add <file>..." to include in what will be committed)\par
+        \cf5 example.log\par
+\cf0         \cf5 gitdemo/\par
+\par
+\cf0 nothing added to commit but untracked files present (use "git add" to track)\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git branch\par
+  GitNewBranch\par
+  GitWork\par
+* \cf1 master\par
+\par
+Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git checkout GitWork\par
+Switched to branch 'GitWork'\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (GitWork)\par
+\cf0 $ vi work.xml\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (GitWork)\par
+\cf0 $ cat work.xml\par
+owl\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (GitWork)\par
+\cf0 $ git add work.xml\par
+warning: LF will be replaced by CRLF in work.xml.\par
+The file will have its original line endings in your working directory\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (GitWork)\par
+\cf0 $ vi work.txt\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (GitWork)\par
+\cf0 $ cat work.xml\par
+owl\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (GitWork)\par
+\cf0 $ git add work.xml\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (GitWork)\par
+\cf0 $ git commit -m "xml file added"\par
+[GitWork 21654df] xml file added\par
+ 1 file changed, 1 insertion(+)\par
+ create mode 100644 work.xml\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (GitWork)\par
+\cf0 $ git checkout master\par
+Switched to branch 'master'\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ vi work.xml\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ cat work.xml\par
+pusi cat\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git add work.xml\par
+warning: LF will be replaced by CRLF in work.xml.\par
+The file will have its original line endings in your working directory\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git commit -m "work.xml added from master"\par
+[master e2b2c99] work.xml added from master\par
+ 1 file changed, 1 insertion(+)\par
+ create mode 100644 work.xml\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git log --graph --oneline --decorate all\par
+fatal: ambiguous argument 'all': unknown revision or path not in the working tree.\par
+Use '--' to separate paths from revisions, like this:\par
+'git <command> [<revision>...] -- [<file>...]'\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git log --graph --oneline --decorate --all\par
+* \cf3 e2b2c99 (\cf6 HEAD -> \cf7 master\cf3 )\cf0  work.xml added from master\par
+* \cf3 bcabe63\cf0  file added\par
+*   \cf3 6034ce6\cf0  i.example merged\par
+\cf1 |\cf3\\\par
+\cf0 * \cf3 |\cf0  \cf3 dcc60e5\cf0   modified from master\par
+* \cf3 |\cf0  \cf3 3e8e5e0\cf0  i.example from master\par
+\cf3 |\cf0  \cf3 |\cf0  * \cf3 21654df (\cf7 GitWork\cf3 )\cf0  xml file added\par
+\cf3 |\cf0  \cf3 |/\par
+|\cf0  * \cf3 61974d4\cf0  i.example added\par
+\cf3 |/\par
+\cf0 * \cf3 4d8bff7 (\cf8 origin/master\cf3 , \cf8 origin/GitNewBranch\cf3 , \cf7 GitNewBranch\cf3 )\cf0  example.txt added\par
+* \cf3 6cb5958\cf0  first commit\par
+* \cf3 9a4ad14\cf0  initial commit\par
+* \cf3 0eb3aab\cf0  first commit\par
+* \cf3 c884a73\cf0  first commit\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git diff master GitWork\par
+\b diff --git a/candy.txt b/candy.txt\par
+deleted file mode 100644\par
+index 568650a..0000000\par
+--- a/candy.txt\par
++++ /dev/null\par
+\cf4\b0 @@ -1 +0,0 @@\par
+\cf5 -fish\par
+\cf0\b diff --git a/i.example b/i.example\par
+index d000bcb..ce01362 100644\par
+--- a/i.example\par
++++ b/i.example\par
+\cf4\b0 @@ -1,5 +1 @@\par
+\cf5 -<<<<<<< HEAD\par
+-cat\par
+-=======\par
+\cf0  hello\par
+\cf5 ->>>>>>> GitWork\par
+\cf0\b diff --git a/work.xml b/work.xml\par
+index 4876e0a..c3de8b0 100644\par
+--- a/work.xml\par
++++ b/work.xml\par
+\cf4\b0 @@ -1 +1 @@\par
+\cf5 -pusi cat\par
+\cf1 +owl\par
+\par
+Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git merge GitWork\par
+CONFLICT (add/add): Merge conflict in work.xml\par
+Auto-merging work.xml\par
+Automatic merge failed; fix conflicts and then commit the result.\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master|MERGING)\par
+\cf0 $ git config merge.tool vimdiff\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master|MERGING)\par
+\cf0 $ git merge tool\par
+error: Merging is not possible because you have unmerged files.\par
+\cf3 hint: Fix them up in the work tree, and then use 'git add/rm <file>'\par
+hint: as appropriate to mark resolution and make a commit.\par
+\cf0 fatal: Exiting because of an unresolved conflict.\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master|MERGING)\par
+\cf0 $ git mergetool\par
+Merging:\par
+work.xml\par
+\par
+Normal merge conflict for 'work.xml':\par
+  \{local\}: created file\par
+  \{remote\}: created file\par
+3 files to edit\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master|MERGING)\par
+\cf0 $ git log --graph --oneline --decorate --all\par
+* \cf3 e2b2c99 (\cf6 HEAD -> \cf7 master\cf3 )\cf0  work.xml added from master\par
+* \cf3 bcabe63\cf0  file added\par
+*   \cf3 6034ce6\cf0  i.example merged\par
+\cf1 |\cf3\\\par
+\cf0 * \cf3 |\cf0  \cf3 dcc60e5\cf0   modified from master\par
+* \cf3 |\cf0  \cf3 3e8e5e0\cf0  i.example from master\par
+\cf3 |\cf0  \cf3 |\cf0  * \cf3 21654df (\cf7 GitWork\cf3 )\cf0  xml file added\par
+\cf3 |\cf0  \cf3 |/\par
+|\cf0  * \cf3 61974d4\cf0  i.example added\par
+\cf3 |/\par
+\cf0 * \cf3 4d8bff7 (\cf8 origin/master\cf3 , \cf8 origin/GitNewBranch\cf3 , \cf7 GitNewBranch\cf3 )\cf0  example.txt added\par
+* \cf3 6cb5958\cf0  first commit\par
+* \cf3 9a4ad14\cf0  initial commit\par
+* \cf3 0eb3aab\cf0  first commit\par
+* \cf3 c884a73\cf0  first commit\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master|MERGING)\par
+\cf0 $ git add work.xml\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master|MERGING)\par
+\cf0 $ git commit -m "merged"\par
+[master f6c1acd] merged\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git status\par
+On branch master\par
+Untracked files:\par
+  (use "git add <file>..." to include in what will be committed)\par
+        \cf5 example.log\par
+\cf0         \cf5 gitdemo/\par
+\cf0         \cf5 work.txt\par
+\cf0         \cf5 work.xml.orig\par
+\par
+\cf0 nothing added to commit but untracked files present (use "git add" to track)\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ cat work.xml\par
+<<<<<<< HEAD\par
+pusi cat\par
+=======\par
+owl\par
+>>>>>>> GitWork\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git branch\par
+  GitNewBranch\par
+  GitWork\par
+* \cf1 master\par
+\par
+Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git branch -d GitWork\par
+Deleted branch GitWork (was 21654df).\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git branch\par
+  GitNewBranch\par
+* \cf1 master\par
+\par
+Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git branch -d GitNewBranch\par
+Deleted branch GitNewBranch (was 4d8bff7).\par
+\par
+\cf1 Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git branch\par
+* \cf1 master\par
+\par
+Lenovo@DESKTOP-25MON2V \cf2 MINGW64 \cf3 ~/git\cf4  (master)\par
+\cf0 $ git log --graph --oneline --decorate\par
+*   \cf3 f6c1acd (\cf6 HEAD -> \cf7 master\cf3 )\cf0  merged\par
+\cf5 |\cf1\\\par
+\cf5 |\cf0  * \cf3 21654df\cf0  xml file added\par
+* \cf1 |\cf0  \cf3 e2b2c99\cf0  work.xml added from master\par
+* \cf1 |\cf0  \cf3 bcabe63\cf0  file added\par
+* \cf1 |\cf0  \cf3 6034ce6\cf0  i.example merged\par
+\cf3 |\cf1\\|\par
+\cf3 |\cf0  * \cf3 61974d4\cf0  i.example added\par
+* \cf9 |\cf0  \cf3 dcc60e5\cf0   modified from master\par
+* \cf9 |\cf0  \cf3 3e8e5e0\cf0  i.example from master\par
+\cf9 |/\par
+\cf0 * \cf3 4d8bff7 (\cf8 origin/master\cf3 , \cf8 origin/GitNewBranch\cf3 )\cf0  example.txt added\par
+* \cf3 6cb5958\cf0  first commit\par
+* \cf3 9a4ad14\cf0  initial commit\par
+* \cf3 0eb3aab\cf0  first commit\par
+* \cf3 c884a73\cf0  first commit\par
+\par
+\f1\fs22\par
+}
+ 
